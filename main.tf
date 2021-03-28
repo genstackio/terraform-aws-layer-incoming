@@ -18,9 +18,7 @@ resource "aws_lambda_permission" "incoming-to-lambda" {
 }
 
 module "lambda" {
-  source        = "genstackio/lambda/aws"
-  version       = "0.1.3"
-  file          = var.package_file
+  source        = "./modules/lambda"
   name          = "${var.env}-incoming"
   handler       = "index.handler"
   timeout       = 600

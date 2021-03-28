@@ -1,17 +1,15 @@
-# AWS API Status Layer Terraform module
+# AWS Incoming Layer Terraform module
 
 Terraform module which creates an entire layer (i.e. module to be contained in its own tfstate).
-It manage an API Gateway v2 linked to a Lambda with a ready-to-use NodeJS source code to handle
-status on AWS.
+It manage a trigger from s3 event to a Lambda with a ready-to-use NodeJS source code to handle
+incoming files on AWS.
 
 ## Usage
 
 ```hcl
 module "main" {
-  source     = "genstackio/layer-api-status/aws"
+  source     = "genstackio/layer-incoming/aws"
 
-  env        = "prod"
-  dns        = "status.mydomain.com"
-  dns_zone   = "id-of-the-route53-zone"
+  // ...
 }
 ```
