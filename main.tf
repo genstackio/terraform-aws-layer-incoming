@@ -41,6 +41,9 @@ module "lambda" {
   config_file        = var.config_file
   plugins_file       = var.plugins_file
   utils_file         = var.utils_file
+  providers = {
+    aws = aws
+  }
 }
 
 resource "aws_iam_user" "incoming" {
