@@ -30,3 +30,15 @@ variable "policy_statements" {
   )
   default = []
 }
+variable "config_file" {
+  type = string
+  default = ""
+}
+variable "plugins_file" {
+  type = string
+  default = ""
+}
+variable "utils_file" {
+  type = string
+  default = ""
+}

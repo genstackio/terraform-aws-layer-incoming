@@ -38,6 +38,9 @@ module "lambda" {
   variables          = var.variables
   subnet_ids         = var.subnet_ids
   security_group_ids = var.security_group_ids
+  config_file        = var.config_file
+  plugins_file       = var.plugins_file
+  utils_file         = var.utils_file
 }
 
 resource "aws_iam_user" "incoming" {
